@@ -1,0 +1,24 @@
+{% load static %}
+<html>
+    <body> 
+        buyer select what crop he wants and submit
+        <form method="GET">
+            <label for="nam">Choose a food item from available list:</label>
+            <select name="crop" id="crop">
+              {% for i in  item %}
+              <option value="{{i.crop_name}}">{{i.crop_name}}</option>
+              {% endfor%}  
+                </select>
+            <br><br>
+            <input type="submit" value="Submit">
+          </form>
+          <p id="avail">
+              </p>
+      {% for i in  obj %}
+        <h3>{{i.user_name}}  and price = {{i.price_per_kg}} Rs  and available in kg's ={{i.max_kg}}</h3>
+              {% endfor %}
+
+              here take from user which seller he want to buy from and how much he will buy
+
+    </body>
+</html>

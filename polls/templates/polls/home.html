@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">    
+</head>
+<body>
+    <header>
+    <div class="wrapper">
+<ul class="nav-area">
+    <!-- need to fill all these-->
+<li><a href="#">Home</a></li>
+<li><a href="#">About Us</a></li>
+<li><a href="#">Wish List</a></li>
+<li><a href="#">Portfolio</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</div>
+<div class="welcome-text">
+        <h1>
+E <span>MARKET</span></h1>
+<p>Buy the vegtables from the person directly  who grows it</p>
+<a href="/polls/login/">Customers</a><br>
+<a href="/polls/loginfarm/">Farmers</a>
+    </div>
+</header>
+
+</body>
+</html>

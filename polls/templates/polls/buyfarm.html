@@ -1,0 +1,55 @@
+{% load static %}
+<html>
+    <body> 
+        farmers select what crop he wants and submit
+        <form method="GET">
+            <label for="nam">Choose a good item:</label>
+            <select name="crop" id="crop">
+              {% for i in  item %}
+              <option value="{{i.good_name}}">{{i.good_name}}</option>
+              {% endfor%}  
+              
+            </select>
+            <br><br>
+            <input type="submit" value="Submit">
+
+          </form>
+          <p id="avail">
+              </p>
+              {% for i in  obj %}
+              <h3>{{i.company}}  and price = {{i.priceperkg}} Rs </h3>
+                    {% endfor %}
+              pick from the available sellers:
+              <form method="GET">
+                <label for="nam">Choose a seller:</label>
+                <select name="seller" id="seller">
+                  {% for i in  obj %}
+              <option value="{{i.company}}">{{i.company}}</option>
+              {% endfor%}
+            </select><br>
+            <label for="nam">User Name</label>
+            <input type="text" name="who" id="nam"><br/>
+            <label for="city">city</label>
+            <input type="text" name="city" id="city"><br/>
+            <label for="phn">phone number</label>
+            <input type="text" name="phn" id="phn"><br/>
+            <label for="email">email optional</label>
+            <input type="text" name="email" id="email"><br/>
+            <br><br>
+            <input type="submit" value="Submit">
+            <input type="submit" name="cart"value="cart">
+            <!--<label type="submit" name="cr" value="{{crop_nm}}">-->
+            
+              </form>
+                    
+              <script>
+                var str='{{mssg}}';
+                var n = str.length;
+                if(n!=0){
+                alert('{{ mssg }}');
+                }
+            </script>      
+
+            <h1> need to add check out cart and also remove function in cart if possible </h1>
+    </body>
+</html>

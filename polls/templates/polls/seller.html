@@ -1,0 +1,40 @@
+{% load static %}
+<html>
+<head>
+<title>105dce1d</title>
+</head>
+<body>
+<div class="container">
+<h1>Enter the details</h1>
+<form  method="GET">
+<label for="ident">Farmer id </label>
+<input type="text" name="ident" id="ident"><br/> 
+<label for="nam">Farmer name </label>
+<input type="text" name="nam" id="v"><br/>    
+<label for="nam">crop name</label>
+<input type="text" name="crop" id="nam"><br/>
+<label for="id_1723">price per kg</label>
+<input type="text" name="price" id="id_1723"><br/>
+<label for="kg">max kg affordable</label>
+<input type="text" name="max" id="max"><br/>
+<label for="img">Select image:</label>
+<input type="file" id="img" name="img" accept="image/*"><br>
+<input type="submit" value="submit">
+<input type="submit" name="cancel" value="Cancel">
+</form>
+<p>
+    even take impage as input it would be nice to show<br>
+  
+    <a href="/polls/buyAndsell/">go to buyers and seller page</a>
+    
+</p>
+</div>
+<script>
+    var str='{{mssg}}';
+    var n = str.length;
+    if(n!=0){
+    alert('{{ mssg }}');
+    }
+</script>
+</body>
+</html>
